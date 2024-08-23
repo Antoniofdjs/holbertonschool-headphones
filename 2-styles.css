@@ -1,0 +1,323 @@
+/* Base styles */
+body {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+p,
+h1,
+h2,
+h3 {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+body a {
+  color: white;
+}
+
+body a:visited {
+  color: #ff6565;
+}
+
+body a:active {
+  color: #ff6565;
+}
+
+header {
+  width: 100%;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  background-image: url("/images/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  gap: 180px;
+  padding-top: env(safe-area-inset-top);
+  padding-top: constant(safe-area-inset-top); /* For older iOS */
+  padding-top: 20px; /* Fallback for unsupported browsers */
+}
+
+@media (max-width: 480px) {
+  header {
+    background-position: 35%; /* Make face visible  */
+  }
+}
+
+/* START Header Navigation */
+/* Contains logo and nav bar */
+header #logo-nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: auto;
+}
+
+header #burger-menu {
+  display: none;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  width: auto;
+  overflow: hidden;
+  gap: 40px;
+}
+
+@media (max-width: 480px) {
+  header #logo-nav-container {
+    width: 90%;
+    gap: 80px;
+    align-items: center;
+    justify-content: start;
+  }
+
+  header #burger-menu {
+    display: block; /* Show burger menu */
+  }
+  header nav {
+    display: none; /* Hide nav bar */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    z-index: 1000; /* Ensure it is above other content */
+  }
+}
+
+header nav a {
+  height: 100%;
+  width: auto;
+  color: white;
+  text-decoration: none;
+  display: block; /* Make the links block level */
+}
+
+#menu-toggle:checked ~ #main-nav {
+  display: flex; /* Show nav bar when checkbox is checked */
+}
+
+/* END Header Navigation */
+header section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* START Banner section content */
+header section h1 {
+  width: 80%;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+#banner-text-1 {
+  margin-top: 0px;
+  width: 60%;
+  text-align: center;
+  font-weight: 700;
+  color: white;
+}
+
+header section #banner-button-div {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 45px;
+}
+
+#banner-button-div button {
+  background-color: #ff6565;
+  color: white;
+  font-size: small;
+  padding: 15px 30px;
+  border-radius: 40px;
+  border: 0px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+#banner-button-div button:hover {
+  opacity: 0.9;
+}
+#banner-button-div button:active {
+  opacity: 0.9;
+}
+
+#banner-text-2 {
+  width: 40%;
+  text-align: center;
+  font-weight: 400;
+  color: white;
+}
+
+@media (max-width: 480px) {
+  header section #banner-button-div {
+    margin-top: 2px;
+  }
+  header section h1 {
+    width: 80%;
+  }
+  #banner-text-2 {
+    width: 80%;
+    margin-top: 0;
+  }
+}
+/* END Banner Section Content */
+
+/* START What we do Section */
+.main-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.main-text-container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-text-container h2 {
+  padding: 0;
+  padding-bottom: 50px;
+  margin: 0;
+}
+
+#what-we-do-text1 {
+  width: 70%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  color: black;
+  padding-bottom: 80px;
+}
+
+#what-we-do-title {
+  color: black;
+}
+
+/* Emblems/logo container */
+.emblems-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 6px;
+  width: 70%;
+  height: auto;
+}
+
+.emblem-container {
+  height: auto;
+  width: 15rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.emblem-image-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.emblem-image-container img {
+  width: 60px;
+  object-fit: fill;
+  height: 50px;
+}
+
+section .emblem-container h3 {
+  padding-bottom: 10px;
+  margin: 0;
+  width: 70%;
+  text-align: center;
+  color: black;
+  font-weight: 700;
+}
+
+section .emblem-container p {
+  margin: 0;
+  width: 70%;
+  text-align: center;
+  color: black;
+  font-weight: 400;
+}
+
+@media (max-width: 480px) {
+  .main-text-container {
+    width: 100%;
+  }
+  .emblems-container {
+    width: 76%;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 70px;
+  }
+  .emblem-container {
+    width: auto;
+  }
+}
+/* START Results section  */
+
+#results-section {
+  width: 100%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  background-image: url(/images/maskBackground.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#results-section p,
+h3,
+h2 {
+  color: white;
+  text-align: center;
+}
+#results-emblems-container {
+  width: 100%;
+  gap: 90px;
+}
+
+#results-emblems-container .emblem-container {
+  margin-right: 37px;
+}
+
+#results-emblems-container .emblem-container .emblem-image-container img {
+  width: 200px;
+  height: 200px;
+}
