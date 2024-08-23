@@ -222,7 +222,7 @@ header section #banner-button-div {
 }
 
 /* Emblems/logo container */
-#emblems-container {
+.emblems-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -232,7 +232,7 @@ header section #banner-button-div {
   height: auto;
 }
 
-#emblem-container {
+.emblem-container {
   height: auto;
   width: 15rem;
   display: flex;
@@ -242,19 +242,19 @@ header section #banner-button-div {
   align-items: center;
 }
 
-#emblem-image-container {
+.emblem-image-container {
   display: flex;
   justify-content: center;
   padding-bottom: 10px;
 }
 
-#emblem-image-container img {
+.emblem-image-container img {
   width: 60px;
   object-fit: fill;
   height: 50px;
 }
 
-section #emblem-container h3 {
+section .emblem-container h3 {
   padding-bottom: 10px;
   margin: 0;
   width: 70%;
@@ -263,7 +263,7 @@ section #emblem-container h3 {
   font-weight: 700;
 }
 
-section #emblem-container p {
+section .emblem-container p {
   margin: 0;
   width: 70%;
   text-align: center;
@@ -275,14 +275,14 @@ section #emblem-container p {
   #what-we-do-div {
     width: 100%;
   }
-  #emblems-container {
+  .emblems-container {
     width: 76%;
     justify-content: space-between;
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 70px;
   }
-  #emblem-container {
+  .emblem-container {
     width: auto;
   }
 }
